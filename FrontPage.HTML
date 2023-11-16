@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <!--Viejo sistema de tipo de documento para importar y comprobar reglas 1994--> 
+<html lang="en"> <!-- Root element-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jafet Valencia">
+    <meta name="description" content="TIA HTML">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/StyleFrontPage.CSS" rel="stylesheet" type="text/css">
+
+
+    <!--<script type ="text/javascript" src="js/CodeFrontPage.JS"></script>--> 
+<script>
+
+    function showMessage() {alert("Mensaje de presión de botón");}
+
+    function validarFormulario() 
+    {
+    var txtNombre = document.getElementById('NombreInput1').value;
+    var cmbSelector = document.getElementById('Selector').selectedIndex;
+    var chkEstado = document.getElementById("CheckBoxInput1");
+
+    alert(chkEstado.checked)
+
+    if(txtNombre == null || txtNombre == '') 
+    { alert('Error: Nombre vacío'); return false;}
+
+    if(cmbSelector == null || cmbSelector == 0) 
+    { alert('Error: Animal no selecionado'); return false;}
+
+    if(!chkEstado.checked)
+    {alert('Error: casilla de verificación no seleccionada'); return false; }
+
+    alert('Datos Correctos'); return true;
+
+
+    }
+
+</script>
+</head>
+<body>
+    
+
+
+<!--<form action="#" method="get">
+<label for="Nombrel">Primer Nombre: </label><input type="text" name="Nombrel"><br>
+<label for="Apellidol">Primer Apellido: </label><input type="text" name="Apellidol"><br>
+<input type="submit" value="Submit" onclick="showMessage(); ">
+</form>-->
+
+<form action="" onsubmit="return validarFormulario()">
+<label for="Nombre">Nombre: </label>
+<input id="NombreInput1" name="NombreInput" type="text">
+<br><br>
+<label for="Selector">Selecciona un animal:</label>
+<select id="Selector" name="Selector">
+    <option value="1">loro</option>
+    <option value="2">Elefante</option>
+    <option value="3">leon</option>
+</select>
+<br><br>
+<label for="CheckBox" name="CheckBox" type="checkbox">Deportes:</label>
+
+<input id="CheckBoxInput1" name="CheckBoxInput" type="checkbox"> 
+<span>Clica aquí </span><br> 
+<input type="submit" value="ENVIAR">
+
+
+</form>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <!--Viejo sistema de tipo de documento para importar y comprobar reglas 1994--> 
+<html lang="en"> <!-- Root element-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jafet Valencia">
+    <meta name="description" content="TIA HTML">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <style> 
+    
+    #menuSuperior{
+        width: 25%;
+        background-color: bisque;
+        border-right-color: aqua;
+        border-width: 5px;
+    }
+    
+    #navbarTop{
+        width: 100%;
+        background-color: bisque;
+            border-right-color: aqua;
+            border-width: 5px;
+            margin: 0 auto;
+    }
+
+    #navbarLeftSide{
+        float: left;
+        width: 25%;
+        background-color: bisque;
+        border-right-color: aqua;
+        border-width: 5px;
+ 
+    }
+
+    #articleRightSide{
+        width: 75%;
+        background-color:honeydew;
+        float: left;
+        
+        
+    }
+
+    section::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    #imagenPrincipal{
+
+        width: 90%;
+        margin: 0 5%;
+        
+        
+    }
+
+
+
+    aside {
+        float: right;
+        width: 25%;
+        background-color: bisque;
+    }
+    
+    </style>
+
+</head>
+<body>
+
+
+    <div class="container-fluid" >
+        <nav class="nav" id="navbarTop">
+            <a class="nav-link active" href="Principal.html" tabindex="0" id="menuSuperior">Inicio</a>
+            <a class="nav-link" href="Tablas.html" tabindex="1" id="menuSuperior">Tablas</a>
+            <a class="nav-link" href="Video.html" tabindex="2" id="menuSuperior">Video</a>
+            <a class="nav-link" href="Formulario.html" tabindex="3" id="menuSuperior">Formulario</a>
+        </nav>
+    </div>
+    
+    <div>
+        <img class="img-fluid" src="img/Graphics/desktop-wallpaper-circuit-chip-processor-neon-ultra-16-10-background-computer-processor.jpg" alt="" id="imagenPrincipal">
+    </div>
+
+    
+
+    <div class="container-fluid" >
+        <section>
+                <div id="navbarLeftSide">
+                    <nav class="nav flex-column" >
+                        <a class="nav-link active" href="Principal.html" tabindex="0" id="menuSuperior">Inicio</a>
+                        <a class="nav-link" href="Tablas.html" tabindex="1" id="menuSuperior">Tablas</a>
+                        <a class="nav-link" href="Video.html" tabindex="2" id="menuSuperior">Video</a>
+                        <a class="nav-link" href="Formulario.html" tabindex="3" id="menuSuperior">Formulario</a>
+                    </nav>
+                    <script>
+                        function getDate() {
+                            document.getElementById("demo").innerHTML = Date();
+                        }
+
+                        //Had an error. I was missing the function keyword
+                    </script>
+                    <br><br><br>
+                    <button type="button" onclick=" getDate()"> Fecha actual </button>
+                    <h4 id="demo"></h4>
+                </div>
+                
+                <article class="all-Main" id="articleRightSide">
+                    <h1>Todos los Juegos</h1>
+                    <article class="Main">
+                        <h2>Halo</h2>
+                        <p>
+                            Halo es una popular franquicia de videojuegos desarrollada por Bungie y luego por 343 Industries.
+                            Presenta una serie de juegos de disparos en primera persona centrados en el protagonista, el Jefe Maestro,
+                            un supersoldado que lucha contra amenazas alienígenas, principalmente el Pacto.
+                            La franquicia es conocida por su historia envolvente, su icónico juego multijugador y su impresionante universo
+                            de ciencia ficción, convirtiéndose en una de las series de juegos más influyentes y exitosas de la historia.
+                        </p>
+                        <figure>
+                            <img style="width: 50%;" src="https://cdn.mos.cms.futurecdn.net/GfzwEBy5XYUZnfV5tkZ7dH.jpg" alt="">
+                            <figcaption class="pic">Jefe Maestro aterrizando en una ciudad del Pacto en Halo 4</figcaption>
+                        </figure>
+                    </article>
+    
+                    <article class="Main">
+                        <h2>Mario</h2>
+                        <p>
+                            La franquicia Mario, creada por Nintendo, es una querida serie de videojuegos de plataformas protagonizada por Mario,
+                            un alegre fontanero italiano.
+                            Conocida por sus mundos coloridos e imaginativos, los jugadores navegan a través de varios niveles, recopilan monedas y
+                            rescatan a la Princesa Peach
+                            del antagonista, Bowser. La franquicia incluye numerosos spin-offs, como juegos de carreras, deportes y fiestas,
+                            y Mario se ha convertido en un símbolo icónico de los videojuegos,
+                            entreteniendo a generaciones de jugadores desde su inicio en la década de 1980.
+                        </p>
+                        <figure>
+                            <img style="width: 50%;" src="https://i.ytimg.com/vi/1TUtU2F0h2w/maxresdefault.jpg" alt="">
+                            <figcaption class="pic">Super Mario World 1990 pantalla principal, un juego atemporal</figcaption>
+                        </figure>
+                    </article>
+    
+                    <article class="Main">
+                        <h2>GTA</h2>
+                        <p>
+                            La franquicia GTA (Grand Theft Auto), desarrollada por Rockstar Games, es una serie altamente popular de
+                            juegos de acción y aventuras de mundo abierto.
+                            Los jugadores exploran vastas ciudades ficticias mientras asumen el papel de criminales, completan misiones
+                            y participan en diversas actividades
+                            como conducir, disparar y causar estragos. Conocida por sus temas maduros, sátira y jugabilidad envolvente,
+                            la franquicia ha sido elogiada y controvertida,
+                            convirtiéndose en una parte significativa e influyente de la industria del juego desde su debut en 1997.
+                        </p>
+                        <figure>
+                            <img style="width: 50%;" src="https://cutewallpaper.org/21/hd-gta-5-wallpapers/Gta-5-Car-Best-Hd-Wallpaper-Wallpaper-Background-HD.jpg" alt="">
+                            <figcaption class="pic">Persecución de autos en GTA V</figcaption>
+                        </figure>
+                    </article>
+                </article>
+
+            
+        </section>
+        
+    
+
+    
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+
+                <aside class="mb-4">
+                    <p style="color: darkslategray;">Este es un pié de página. Voy a aprovechar para hablar de un cítrico: El limón es un tipo de fruta que es verde y crece en climas templados.</p>
+                </aside>
+                <p title="Pensaste que iba a decir frutas, ¿verdad? :)">Me gusta consumir limones junto con fuertes bebidas frescas.</p>
+                <p>
+                    Este es texto en el PIE DE PÁGINA
+                </p>
+                <p class="mt-3">"Lo que hoy queremos es tener un contacto más cercano y mejorar nuestro entendimiento como individuos y comunidades en el mundo entero, así como la eliminación del egoísmo y el orgullo, siempre propenso a empujar el mundo hacia la barbarie primitiva y el conflicto... La paz solo nos puede llegar como la consecuencia natural de una iluminación universal." - Nikola Tesla</p>
+
+            </div>
+
+        </footer>
+    </div>
+    
+    
+    </div>
+
+
+</body>
+</html>

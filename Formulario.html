@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estiloPrincipal.css">
+
+    <style>#menuSuperior{
+        width: 25%;
+        background-color: bisque;
+        border-right-color: aqua;
+        border-width: 5px;
+    }
+    
+    #navbarTop{
+        width: 100%;
+        background-color: bisque;
+            border-right-color: aqua;
+            border-width: 5px;
+            margin: 0 auto;
+    }
+    
+    #navbarLeftSide{
+        float: left;
+        width: 25%;
+        background-color: bisque;
+        border-right-color: aqua;
+        border-width: 5px;
+    
+    }
+    
+    #articleRightSide{
+        width: 75%;
+        background-color:honeydew;
+        float: left;
+        
+        
+    }
+    
+    section::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    #imagenPrincipal{
+    
+        width: 90%;
+        margin: 0 5%;
+        
+        
+    }
+    
+    
+    
+    aside {
+        float: right;
+        width: 25%;
+        background-color: bisque;
+    }
+    </style>
+
+    <script>
+
+        function showMessage() {alert("Mensaje de presión de botón");}
+
+        function validarFormulario() 
+        {
+        var txtNombre = document.getElementById('NombreInput1').value;
+        var txtDireccion = document.getElementById('DireccionInput1').value;
+        var txtTelefono = document.getElementById('TelefonoInput1').value;
+        var txtCorreo = document.getElementById('CorreoInput1').value;
+        var cmbCiudadSelector = document.getElementById('CiudadSelector1').selectedIndex;
+        var cmbEdadSelector = document.getElementById('EdadSelector1').selectedIndex;
+        var chkEstado = document.getElementById("CheckBoxInput1");
+
+        alert(chkEstado.checked)
+
+        if(txtNombre == null || txtNombre == '') 
+        { alert('Error: Nombre vacío'); return false;}
+
+        if(txtDireccion == null || txtDireccion == '') 
+        { alert('Error: Dirección vacía'); return false;}
+
+        if(txtTelefono == null || txtTelefono == '') 
+        { alert('Error: Teléfono vacío'); return false;}
+
+        if(isNaN(parseFloat(txtTelefono )))
+        { alert('Error: Teléfono suministrado no es un número. Use solo números'); return false;}
+
+        if(txtCorreo == null || txtCorreo == '') 
+        { alert('Advertencia: Correo vacío');}
+
+        if(cmbCiudadSelector == null) 
+        { alert('Error: Ciudad no selecionada'); return false;}
+
+        if(cmbEdadSelector == null) 
+        { alert('Error: Edad no selecionada'); return false;}
+
+
+        if(!chkEstado.checked)
+        {alert('Error: casilla de verificación no seleccionada'); return false; }
+
+        alert('Datos Correctos. En procesamiento con el Servidor'); return true;
+
+
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+    
+    <div class="container-fluid" >
+        <nav class="nav" id="navbarTop">
+            <a class="nav-link active" href="Principal.html" tabindex="0" id="menuSuperior">Inicio</a>
+            <a class="nav-link" href="Tablas.html" tabindex="1" id="menuSuperior">Tablas</a>
+            <a class="nav-link" href="Video.html" tabindex="2" id="menuSuperior">Video</a>
+            <a class="nav-link" href="Formulario.html" tabindex="3" id="menuSuperior">Formulario</a>
+        </nav>
+    </div>
+    
+    <div>
+        <img class="img-fluid" src="img/Graphics/windows-11-mountain-microsoft-hd-wallpaper-uhdpaper.com-136@0@h.jpg" alt="" id="imagenPrincipal">
+    </div>
+
+    <br><br>
+
+    <form action="" onsubmit="return validarFormulario()" class="d-flex flex-column align-items-center">
+
+        <label for="NombreInput">Nombre: </label>
+        <input id="NombreInput1" name="NombreInput" type="text">
+        <br><br>
+
+        <label for="DireccionInput">Dirección: </label>
+        <input id="DireccionInput1" name="DireccionInput" type="text">
+        <br><br>
+
+        <label for="TelefonoInput">Teléfono: </label>
+        <input id="TelefonoInput1" name="TelefonoInput" type="text">
+        <br><br>
+
+        <label for="CorreoInput">Correo: </label>
+        <input id="CorreoInput1" name="CorreoInput" type="text">
+        <br><br>
+
+        <label for="CiudadSelector">Seleccione su ciudad: </label>
+        <select id="CiudadSelector1" name="CiudadSelector">
+            <option value="1">Medellín</option><option value="4">Bucaramanga</option>
+            <option value="2">Bogotá</option><option value="5">Santa Marta</option>
+            <option value="3">Cali</option><option value="6">Cartagena</option>
+            <option value="7">Otra no listada</option>
+        </select>
+        <br><br>
+
+        <label for="EdadSelector">Seleccione su edad: </label>
+        <select id="EdadSelector1" name="EdadSelector">
+            <option value="1">1 a 9</option>
+            <option value="2">10 a 19</option>
+            <option value="3">20 a 29</option>
+            <option value="4">30 a 39</option>
+            <!-- Añadir opciones para edades adicionales -->
+            <option value="5">40 a 49</option>
+            <option value="6">50 a 59</option>
+            <option value="7">60 a 69</option>
+            <option value="8">70 a 79</option>
+            <option value="9">80 a 89</option>
+            <option value="10">90 a 99</option>
+        </select>
+        <br><br>
+
+        <label for="CheckBox" name="CheckBox" type="checkbox">Aceptación condiciones y tratamiento de datos personales</label>
+        <br>
+        <input id="CheckBoxInput1" name="CheckBoxDatosPersonales" type="checkbox"> 
+        <span>Confirmo el consentimiento de mis datos personales bajo política de protección de datos Colombiana </span><br> 
+        <input type="submit" value="ENVIAR">
+        
+        
+        </form>
+        <br><br>
+
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+                <aside class="mb-4">
+                    <p style="color: darkslategray;">¡Explora más allá! En este rincón hablaremos sobre las maravillas del mundo: las estrellas. ¿Sabías que hay más estrellas en el universo que granos de arena en la Tierra?</p>
+                </aside>
+                <p title="Esperabas que hablara de estrellas, ¿verdad? :)">Me encanta perderme en la amplitud del cosmos mientras saboreo una taza de té de manzanilla.</p>
+                <p>
+                    Descubre, sueña y contempla. Esto es texto en el PIE DE PÁGINA.
+                </p>
+                <p class="mt-3">"La imaginación es más importante que el conocimiento. El conocimiento se limita a todo lo que ahora sabemos y comprendemos, mientras que la imaginación abarca el mundo entero, y todo lo que alguna vez conoceremos y entenderemos." - Albert Einstein</p>
+            </div>
+        </footer>
+</body>
+</html>
